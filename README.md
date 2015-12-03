@@ -40,6 +40,7 @@ The template automatically includes `signature.pdf` after the letter's body as a
 - **`geometry`**: A string that sets the margins through `geometry`. Read [this](https://www.sharelatex.com/learn/Page_size_and_margins) to learn how this package works.
 - **`letterhead`**: include custom letterhead in the PDF (see below).
 - **`foldingmarkers`**: add folding markers to the page margin (optional).
+- **`internetmarke`**: add Deutsche Post Internetmarke to the header (optional). See https://internetmarke.deutschepost.de, purchase with option "Adresse hinzufügen".
 
 ## Custom letterhead
 
