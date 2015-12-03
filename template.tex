@@ -122,13 +122,23 @@ $endif$
 % DOCUMENT
 %--------------------------------
 \begin{document}
+
+$if(internetmarke)$
+\setlength{\unitlength}{1mm}
+\begin{picture}(0,0)
+  \put(48,-25){
+	  \includegraphics[trim=50mm 247mm 122mm 38mm,clip,]{internetmarke.pdf}
+	}
+\end{picture}
+$endif$
+
 \small
 \textsc{\textbf{$author$}}
 $for(from)$
-\textbullet{} \textsc{$from$}
+	\textbullet{} \textsc{$from$}
 $endfor$
 
-\vspace{1em}
+\vspace{0.5em}
 
 \normalsize \sffamily
 $for(to)$
