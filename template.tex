@@ -25,6 +25,41 @@ $if(letterhead)$
 \ULCornerWallPaper{1}{letterhead.pdf}
 $endif$
 
+$if(foldingmarkers)$
+% see: http://tex.stackexchange.com/a/246154
+\usepackage{scrlayer-scrpage}
+\newcommand\foldmarklength{2mm}
+\newcommand\punchmarklength{4mm}
+\newcommand\markhpos{3.5mm}
+\newcommand\markthickness{.2mm}
+\newcommand\tfoldmarkvpos{.34\paperheight}
+\newcommand\bfoldmarkvpos{.67\paperheight}
+
+\newcommand\leftmarkline[1]{%
+  \parbox[c][\layerheight][b]{\layerwidth}{%
+    \hspace*{\markhpos}\rule{#1}{\markthickness}%
+}}
+\newif\ifFoldmark\Foldmarktrue
+\newif\ifPunchmark\Punchmarktrue
+\DeclareNewLayer[{
+  background,
+  innermargin,
+  oddpage,% in twoside mode only on odd pages!
+  height=\tfoldmarkvpos,
+  contents={\ifFoldmark\leftmarkline{\foldmarklength}\fi}
+}]{tfoldmark}
+\DeclareNewLayer[{
+  clone=tfoldmark,
+  height=\bfoldmarkvpos
+}]{bfoldmark}
+\DeclareNewLayer[{
+  clone=tfoldmark,
+  height=.5\paperheight,
+  contents={\ifPunchmark\leftmarkline{\punchmarklength}\fi}
+}]{punchmark}
+\AddLayersToPageStyle{@everystyle@}{tfoldmark,bfoldmark,punchmark}
+$endif$
+
 % LANGUAGE
 %--------------------------------
 $if(lang)$
@@ -118,7 +153,7 @@ $endif$
 $body$
 
 \begin{FlushRight}
-  \includegraphics[height=5.5\baselineskip]{signature.pdf} \par
+  \includegraphics[height=5.5\baselineskip]{signature.pdf} \par 
   $author$
 \end{FlushRight}
 
