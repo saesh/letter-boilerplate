@@ -123,27 +123,28 @@ $endif$
 %--------------------------------
 \begin{document}
 
-$if(internetmarke)$
-\setlength{\unitlength}{1mm}
-\begin{picture}(0,0)
-  \put(48,-25){
-	  \includegraphics[trim=50mm 247mm 122mm 38mm,clip,]{internetmarke.pdf}
-	}
-\end{picture}
-$endif$
-
 \small
 \textsc{\textbf{$author$}}
 $for(from)$
 	\textbullet{} \textsc{$from$}
 $endfor$
 
-\vspace{0.5em}
+\vspace{1em}
 
 \normalsize \sffamily
 $for(to)$
 $to$\\
 $endfor$
+
+$if(internetmarke)$
+\setlength{\unitlength}{1mm}
+\begin{picture}(0,0)
+  \put(48,10){
+	  \includegraphics[trim=50mm 247mm 122mm 38mm,clip]{internetmarke.pdf}
+  }
+\end{picture}
+\vspace{-2.2em}
+$endif$
 
 \vspace{3em}
 
