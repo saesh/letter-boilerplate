@@ -20,7 +20,7 @@ To install pandoc on Mac OS X, run `brew install pandoc`. To install it on Linux
 
 1. Run this in your terminal to clone the repo, move into the right directory and delete all the git stuff:
 
-        git clone https://github.com/mrzool/letter-boilerplate.git && cd letter-boilerplate && rm -rf .git
+        git clone https://github.com/saesh/letter-boilerplate.git && cd letter-boilerplate && rm -rf .git
 
 2. Edit `details.yml` with your details, your recipient's details, and the desired settings.
 3. Open `letter.md` and write your letter in markdown.
@@ -47,7 +47,7 @@ If you have already designed your own letterhead and want to use it with this te
 
 ## Recommended readings
 
-- [Typesetting Automation](http://mrzool.cc/writing/typesetting-automation/), my article about this project with in-depth instructions for a typical workflow.
+- [Typesetting Automation](http://mrzool.cc/writing/typesetting-automation/), mrzool's article about this project with in-depth instructions for a typical workflow.
 - [The Beauty of LaTeX](http://nitens.org/taraborelli/latex) by Dario Taraborelli
 - [Letterhead advices](http://practicaltypography.com/letterhead.html) from Butterick's Practical Typography 
 - [Why Microsoft Word must Die](http://www.antipope.org/charlie/blog-static/2013/10/why-microsoft-word-must-die.html) by Charlie Stross
