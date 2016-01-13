@@ -12,7 +12,7 @@ Why settle for MS Word when you can get the job done using your text editor?
 2. [Pandoc](http://pandoc.org/)
 3. [KOMA-Script](http://www.komascript.de/) for adding folding markers (optional)
 
-To install LaTeX on Mac OS X, I recommend getting the smaller version BasicTeX from [here](https://tug.org/mactex/morepackages.html) and installing the additional packages with `tlmgr` afterwards. Same goes for Linux: install `texlive-base` with your package manager and add the needed additional packages later. To get `tlgmr` running so the following after installing:
+To install LaTeX on Mac OS X, I recommend getting the smaller version BasicTeX from [here](https://tug.org/mactex/morepackages.html) and installing the additional packages with `tlmgr` afterwards. Same goes for Linux: install `texlive-base` with your package manager and add the needed additional packages later. To get `tlgmr` running do the following after installing:
 
 ```
 sudo tlmgr update --self
