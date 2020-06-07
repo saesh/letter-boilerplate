@@ -162,7 +162,11 @@ $endif$
 
 $body$
 
+$if(signatureright)$
+\begin{FlushRight}
+$else$
 \begin{FlushLeft}
+$endif$
   \IfFileExists{signature.pdf}
   {
     \includegraphics[height=2.5\baselineskip]{signature.pdf} \par
@@ -171,6 +175,10 @@ $body$
     \vspace{2.5\baselineskip}
   }
   $author$
+$if(signatureright)$
+\end{FlushRight}
+$else$
 \end{FlushLeft}
+$endif$
 
 \end{document}
