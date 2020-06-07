@@ -57,6 +57,7 @@ Although I didn't test it, you can probably use this on Windows, too. Both [Pand
 - **`customdate`**: Allows you to specify a custom date in the format YYYY-MM-DD in case you need to pre/postdate your letter. *Caveat*: Requires `datetime2` along with its language module (ex: if `lang` is set to `german` do `tlmgr install datetime2 datetime2-german`)
 - **`foldingmarkers`**: add folding markers to the page margin (optional).
 - **`internetmarke`**: add Deutsche Post Internetmarke to the header (optional). See https://internetmarke.deutschepost.de, purchase with option "Adresse hinzufügen".
+- **signatureright**: if `true` shift the signature to the right, default is `false`
 
 ## Custom letterhead
 
