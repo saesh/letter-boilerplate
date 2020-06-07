@@ -58,6 +58,7 @@ Although I didn't test it, you can probably use this on Windows, too. Both [Pand
 - **`foldingmarkers`**: add folding markers to the page margin (optional).
 - **`internetmarke`**: add Deutsche Post Internetmarke to the header (optional). See https://internetmarke.deutschepost.de, purchase with option "Adresse hinzufügen".
 - **signatureright**: if `true` shift the signature to the right, default is `false`
+- **windowedenvelope**: if `true` the address block is shifted 1.1mm to the left to fit windowed envelopes, default is `false`
 
 ## Custom letterhead
 

@@ -60,6 +60,11 @@ $if(foldingmarkers)$
 \AddLayersToPageStyle{@everystyle@}{tfoldmark,bfoldmark,punchmark}
 $endif$
 
+% CUSTOM MARGINS
+% see https://tex.stackexchange.com/a/600
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
 % LANGUAGE
 %--------------------------------
 $if(lang)$
@@ -122,6 +127,9 @@ $endif$
 %--------------------------------
 \begin{document}
 
+$if(windowedenvelope)$
+\begin{changemargin}{-1.1cm}{0cm}
+$endif$
 \small
 \textsc{\textbf{$author$}}
 $for(from)$
@@ -143,6 +151,9 @@ $if(internetmarke)$
   }
 \end{picture}
 \vspace{-2.2em}
+$endif$
+$if(windowedenvelope)$
+\end{changemargin}
 $endif$
 
 \vspace{3em}
