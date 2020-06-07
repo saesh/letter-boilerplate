@@ -3,9 +3,10 @@ FILE ?= letter.md
 TEMPLATE ?= template.tex
 src = $(TEMPLATE) $(FILE)
 FLAGS = --pdf-engine=xelatex
+OUTPUT = $(basename $(FILE)).pdf
 
-output.pdf : $(src)
-	$(TEX) $(filter-out $<,$^ ) -o $@ --template=$< $(FLAGS)
+build : $(src)
+	$(TEX) $(filter-out $<,$^ ) -o $(OUTPUT) --template=$< $(FLAGS)
 
 .PHONY: clean
 clean :
