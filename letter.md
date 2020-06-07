@@ -20,6 +20,7 @@ fontsize: 10pt
 geometry: a4paper, left=35mm, right=35mm, top=50mm, bottom=25mm
 # letterhead: true
 # customdate: YYYY-MM-DD
+# foldingmarkers: true
 # signatureright: true
 # windowedenvelope: true
 ---
