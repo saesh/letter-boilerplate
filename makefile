@@ -1,5 +1,10 @@
-output.pdf : template.tex details.yml letter.md
-	pandoc $(filter-out $<,$^ ) -o $@ --latex-engine=xelatex --template=$<
+TEX = pandoc
+src = template.tex letter.md
+FLAGS = --pdf-engine=xelatex
 
+output.pdf : $(src)
+	$(TEX) $(filter-out $<,$^ ) -o $@ --template=$< $(FLAGS)
+
+.PHONY: clean
 clean :
 	rm output.pdf

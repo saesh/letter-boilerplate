@@ -2,11 +2,11 @@
 %!TEX encoding = UTF-8 Unicode
 
 \documentclass[$fontsize$, a4paper]{article}
-\usepackage{fontspec} 
+\usepackage{fontspec}
 
 % LAYOUT
 %--------------------------------
-\usepackage{geometry} 
+\usepackage{geometry}
 \geometry{$geometry$}
 
 % No page numbers
@@ -113,11 +113,10 @@ $endif$
 }
 
 % To display custom date in the example
-% \usepackage[nodayofweek]{datetime}
-% \newdate{date}{01}{12}{1867}
-% \date{\displaydate{date}}
-% Use this instead of \today
-% \displaydate{date}
+$if(customdate)$
+\usepackage[$lang$]{datetime2}
+\DTMsavedate{customdate}{$customdate$}
+$endif$
 
 % DOCUMENT
 %--------------------------------
@@ -150,7 +149,7 @@ $endif$
 
 \rmfamily
 \begin{flushright}
-  $city$, \today
+  $city$, $if(customdate)$\DTMusedate{customdate}$else$\today$endif$
 \end{flushright}
 
 \vspace{1em}
@@ -164,7 +163,13 @@ $endif$
 $body$
 
 \begin{FlushLeft}
-  \includegraphics[height=2.5\baselineskip]{signature.pdf} \par
+  \IfFileExists{signature.pdf}
+  {
+    \includegraphics[height=2.5\baselineskip]{signature.pdf} \par
+  }
+  {
+    \vspace{2.5\baselineskip}
+  }
   $author$
 \end{FlushLeft}
 
