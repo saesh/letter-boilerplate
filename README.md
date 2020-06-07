@@ -8,14 +8,9 @@ Why settle for MS Word when you can get the job done using your text editor?
 
 ## Dependencies
 
-<<<<<<< HEAD
-1. LaTeX with the following extra packages: `fontspec` `geometry` `ragged2e` `enumitem` `xunicode` `xltxtra` `hyperref` `polyglossia` `footmisc`
-2. [Pandoc](http://pandoc.org/)
-3. [KOMA-Script](http://www.komascript.de/) for adding folding markers (optional)
-=======
 1. LaTeX with the following extra packages: `fontspec` `geometry` `ragged2e` `enumitem` `xunicode` `xltxtra` `hyperref` `polyglossia` `footmisc` (also, `datetime2` plus its language modules if you want to use a custom date, see below in the settings section)
 2. [Pandoc](http://pandoc.org/), the universal document converter.
->>>>>>> upstream/master
+3. [KOMA-Script](http://www.komascript.de/) for adding folding markers (optional)
 
 To install LaTeX on Mac OS X, I recommend getting the smaller version BasicTeX from [here](https://tug.org/mactex/morepackages.html) and installing the additional packages with `tlmgr` afterwards. Same goes for Linux: install `texlive-base` with your package manager and add the needed additional packages later. To get `tlgmr` running do the following after installing:
 
@@ -29,9 +24,9 @@ To install pandoc on Mac OS X, run `brew install pandoc`. To install it on Linux
 KOMA-Script is easily installed with `tlmgr` as well, [summary from the KOMA-Script website](http://www.komascript.de/node/1801):
 
 ```
-sudo tlmgr repository add http://www.komascript.de/~mkohm/texlive-KOMA KOMA
-sudo tlmgr pinning add KOMA koma-script
-sudo tlmgr install --reinstall koma-script
+tlmgr repository add https://www.komascript.de/repository/texlive/2020 KOMA
+tlmgr pinning add KOMA koma-script
+tlmgr install --reinstall koma-script
 ```
 
 ## Getting started
