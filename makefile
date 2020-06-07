@@ -1,5 +1,7 @@
 TEX = pandoc
-src = template.tex letter.md
+FILE ?= letter.md
+TEMPLATE ?= template.tex
+src = $(TEMPLATE) $(FILE)
 FLAGS = --pdf-engine=xelatex
 
 output.pdf : $(src)
